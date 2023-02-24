@@ -1,0 +1,22 @@
+{
+  "name": "restaurant-crm-backend",
+  "version": "1.0.0",
+  "description": "Backend Part Of The Crm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/surjayanjati/restaurant-crm-backend.git"
+  },
+  "author": "surjayan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/surjayanjati/restaurant-crm-backend/issues"
+  },
+  "homepage": "https://github.com/surjayanjati/restaurant-crm-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
