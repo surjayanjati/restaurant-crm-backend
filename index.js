@@ -18,7 +18,7 @@ app.use(cookie());       //: -> So That The Applicaiton Can use Cookie //
 require("./routes/AdminSignupRoutes")(app) // :-> Signup - Page Route  //
 require("./routes/adminPanelLoginRoutes")(app)  // :-> Login -Admin Panel Route //
 require("./routes/superAdminCurdRoutes")(app)// :-> Super -Admin Curd with Admin Route //
-
+require("./routes/adminPanelFoodCurdRoutes")(app)//:->Food Curd Route//
 // Listening on The Port Number---------------------------------------------------------->
 app.listen(4567,()=>{
     console.log("Listening To Port Number 4567");

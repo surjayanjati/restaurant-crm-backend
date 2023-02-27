@@ -41,13 +41,13 @@ async function roleCheck(req,res,next){
      switch (userDetailsObj.role) {
        
         case "Super-Admin":
-            console.log("hello");
-            req.details=({id:userId,role:userDetailsObj.role,companyId:userDetailsObj.companyId,companyName:userDetailsObj.companyName});
-            console.log("hi");
+            
+            req.details=({id:userId,role:userDetailsObj.role,companyId:userDetailsObj.companyId,companyName:userDetailsObj.companyName,companyEmail:userDetailsObj.email});
+   
             next();
             break;
         case "Admin":
-            req.details={id:userId,role:userDetailsObj.role};
+            req.details={id:userId,role:userDetailsObj.role,companyId:userDetailsObj.companyId,companyName:userDetailsObj.companyName,companyEmail:userDetailsObj.email};
             next();
              break
         default:res.send({msg:"Kindly Authenticate Yourself",success:false,status:401});

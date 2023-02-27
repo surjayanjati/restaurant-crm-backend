@@ -65,6 +65,9 @@ default:"Super-Admin"
     superAdminId:{
       type:String,
     },
+    employeeId:{
+        type:Number
+    },
     createdAt:{
         type:Date,
         default:()=> Date.now(),
@@ -86,6 +89,11 @@ companySchema.pre("save",async function(next){
     next();
 })
 
+/// Hasing The Password Before Updating ---------------------------------------------------------------->
+companySchema.methods=updatePasswordHashing=async function(password){
+    const hashPassword=await bcrypt.hash(password,8);
+    return hashPassword;
+}
 
 // Exporting The CompanyCollection ---------------------------------------------------------------------->
 module.exports=mongoose.model("companydetails",companySchema)
